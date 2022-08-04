@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Archivo Raiz de Multimedia</title>
+		<link rel="StyleSheet" type="text/css"/>
+        <style>
+            table,tr,th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 6px;
+            }
+            /*Comentarios en css.
+            Ponemos el ancho al 100% para que se adapte al tamaño de
+            la página*/
+            table{
+                width: 100%;
+            }
+        </style>
+	</head>
+    <body>
+        <h1>Ejercicio de Tablas</h1>
+        <!--Vamos a crear tebla de 3 filas y 4 columnas-->
+        <table>
+            <!--El style lo modificamos es esta fila para q afecte a todas las celdas del cabecero de la tabla-->
+            <tr style="background-color: honeydew ;"><!--Filas-->
+
+                <!--Esta etiqueta es nueva y se usa como encabezado, tiene las caracteristicas de los h1-h6-->
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <!--Te adapta el ancho de columna al tamaño de la tabla-->
+                <th style="width:70%">Email</th>
+            </tr>
+            <tr>
+                <!--Por norma general se usa td que son columnas y despúes aplicar css -->
+                <td>Fulanito</td>
+                <td>Rodríguez</td>
+                <td style="text-align:center; ">111111111</td>
+                <td>Pocos@pocos.com</td>
+            </tr>   
+            <tr>
+                <td>Menganito</td>
+                <td>González</td>
+                <td style="text-align:center; ">222222222</td>
+                <td>Muchos@muchos.com</td>
+            </tr>
+            <tr>
+                <!--Combinar celdas horizontal-->
+                <!--Ojo que te cuenta doble la que combinamos(por el nº sino combinaria las que le marquemos pero hay q borrar las que sobren)-->
+                <td colspan="2">0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <!--Combinar celdas verttical
+                ojo q combina con la fila de abajo y tienes q borrar las celdas que haya a mayores en la fila de abajo-->
+                <td rowspan="2">1</td>
+                <td>1</td>
+                <td>1</td>
+                <td rowspan="2">1</td>
+            </tr>
+            <tr>
+                <!--Combinar celdas-->
+                <td>2</td>
+                <td>2</td>
+            </tr>
+
+        </table>
+    </body>
+</hmtl>

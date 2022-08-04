@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Formulario</title>
+		<link rel="StyleSheet" type="text/css"/>
+	</head>
+
+    <body>
+        <!--Creamos formulario web-->
+        <h1>Formulario</h1>
+        <h2>Introduce los datos</h2>
+        <form>
+            <!--La etiqueta label es una ayuda al navegador, es un estandar pq en este momento es lo q se busca en los form-->
+            <!--acordarse que el for es = al id del input-->
+            <!--Al poner el size el tamaño del cuadro de input tiene un tamaño-->
+            <!--maxlength limita los caracteres-->
+            <label for="nombre">Escribe aquí tu nombre:</label><br>
+            <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="15" /><br><br><br>
+            <label for="apellido">Escribe aquí tu apellido:</label><br>
+            <input type="text" value="" id="apellido" name="apellido" size="40"/><br><br><br>
+            <label for="email">Escribe tu Email:</label><br>
+            <!--Con el tipo email pide que lleve una @ sino muestra un fallo-->
+            <!--con required obligamos a rellenar ese campo-->
+            <input type="email" value="" id="email" name="email" placeholder="ej.-nombre@tuemail.com" required/><br><br>
+            <label for="edad">Edad:</label><br><br>
+            <!--Con este tipo sólo dejaría poner un nº-->
+            <!--podemos limitar el nº para q no se escriba lo q les de la gana-->
+            <input type="number" id="edad" name="edad" min="1" max="999" /><br><br>
+            <label for="tel">Teléfono</label><br><br>
+            <input type="tel" id="tel" name="tel"/><br><br>
+
+            <input type="submit" value="Enviar"/><br>
+
+        </form>
+    </body>
+
+</hmtl>
