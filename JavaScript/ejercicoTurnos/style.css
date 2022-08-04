@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+.main{
+    color: rgb(7, 245, 185);
+    font-size: 300px;
+    font-weight: bold;
+    padding: 2%;
+    background-color: rgb(95, 105, 243);
+    border-radius: 15px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border-top: 0.5em solid rgb(59, 21, 161);
+    border-left: 0.5em inset rgb(59, 21, 161);
+    border-right: 0.5em double rgb(59, 21, 161);
+    border-bottom: 0.5em groove rgb(59, 21, 161);  
+}
+.btn{
+    color: rgb(7, 245, 185);
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1%;
+    background-color: rgb(95, 105, 243);
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 5%;
+    border-top: 0.5em solid rgb(59, 21, 161);
+    border-left: 0.5em inset rgb(59, 21, 161);
+    border-right: 0.5em double rgb(59, 21, 161);
+    border-bottom: 0.5em groove rgb(59, 21, 161);  
+}
+.t{
+    font-size: 150px;
+    margin-top: 0%;
+}
