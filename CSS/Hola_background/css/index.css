@@ -1,0 +1,45 @@
+ /* url según ruta relativa.
+    Tenemos q salir de la carpeta css;
+     hay q ir un directorio atrás, donde está la carpeta img
+     y luego entrar en la carpeta para seleccionar el fichero de imagen
+     ../es retroceder una carpeta*/
+/*body{
+   /*Al escribir cover te cubre toda la página y no-repeat no la repite
+    con lo que no sale como si fuera un mosaico
+    background-image: url("../img/mar-atardecer_960_720.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+#fondo{
+    background-image: url("../img/mar-atardecer_960_720.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*para que el div cubra toda la pantalla, pq ahora no sabemos donde está,
+    le damos dimensiones*/
+    width: 100%;
+    height: 100vh; /*vh= viewport height, es la ventana donde está la web*/
+    /*Lo ponemos en posición absoluta desde el pto 0 q es izq arriba*/
+    position: absolute;
+    top:0;
+    left: 0;
+    background-position: center;/*con esto conseguimos q coma lo mismo de los lados dch y abajo*/
+    z-index: 0;
+}
+/*el pto es para identificar la clase y la #es para el id*/
+.titulo{
+    position: relative;
+    margin-top: 50vh;
+}
+.titulo2{
+
+    position: absolute;
+    top:30%;
+    left: 25%;
+    width: 50%;
+}
+/*podemos poner + clases y escribir sólo 1 vez el color, la sombra y centrarlo*/
+.texto-blanco{
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejercicio_enlaces</title>
+        <link href="css/index.css" rel="StyleSheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+
+    <body class="general">
+        <header id="header">
+
+        </header>
+        <form>
+            <!--La etiqueta label es una ayuda al navegador, es un estandar pq en este momento es lo q se busca en los form-->
+            <!--acordarse que el for es = al id del input-->
+            <!--Al poner el size el tamaño del cuadro de input tiene un tamaño-->
+            <!--maxlength limita los caracteres-->
+            <!--Con placeholder nos sale el texto q escribamos para q se vea en el input y este desaparece una vez cliquemos encima-->
+            <!--Pattern indica como queremos q sea la estructura del texto [de donde a donde]{cuantos caracteres}-->
+            <!--required es para q sea abligatorio escribir ese texto-->
+            <!--En opciones tipo radio el name tiene q ser igual en todas para q de una opcion sola-->
+            <!--input list lo estoy usando para poder elegir una opcion de un desplegable-->
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre"><i class="fas fa-asterisk"></i>Escribe aquí tu nombre:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="25" placeholder="Nombre" class="texto" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="edad">Escribe aquí tu edad:</label>
+                    </td>
+
+                    <td>
+                        <input type="number" value="" id="edad" name="edad" size="20" maxlength="15" placeholder="Edad" class="texto" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email"><i class="fas fa-asterisk"></i>Escribe aquí tu email:</label>
+                    </td>
+                    <td>
+                        <input type="text" value="" id="email" name="email" size="20" maxlength="15" placeholder="email" class="texto" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tel"><i class="fas fa-asterisk"></i>Escribe aquí tu teléfono:</label>
+                    </td>
+
+                    <td>
+                        <input type="tel" value="" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Teléfono" class="texto" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="datemin">Fecha de nacimiento:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="date" name="date" class="texto">
+                    </td>
+                    <tr>
+                        <td>
+                            <label for="text">¿Como asistes al curso?</label>
+                        </td>
+                        <td>
+                            <input type="radio" value="coche" name="asistir" class="elegir" />
+                            <label for="coche" class="elegir">Coche</label><br>
+                            <input type="radio" name="asistir" value="a_pie" class="elegir" />
+                            <label for="a_pie" class="elegir">Andando</label><br>
+                            <input type="radio" name="asistir" value="bus" class="elegir" />
+                            <label for="bus" class="elegir">Bus</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="text">¿Que vehículo tienes?</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="vehicle1" value="Bike" class="elegir" />
+                            <label for="vehicle1" class="elegir">Bicicleta </label><br>
+                            <input type="checkbox" name="vehicle2" value="Car" class="elegir" />
+                            <label for="vehicle2" class="elegir"> Coche</label><br>
+                            <input type="checkbox" name="vehicle3" value="Moto" class="elegir" />
+                            <label for="vehicle3" class="elegir">Moto</label><br>
+                            <input type="checkbox" name="vehicle4" value="Patinete" class="elegir" />
+                            <label for="vehicle4" class="elegir">Patinete</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="curso">Elige los cursos que quieres hacer:</label>
+                        </td>
+                        <td>
+                            <input list="curso" placeholder="Haz dobleclick y elige uno" class="texto">
+                            <datalist id="curso">
+                                <option value="HTML">
+                                <option value="CSS">
+                                <option value="JS">
+                                <option value="PHP">
+                                <option value="C#">
+                            </datalist>
+
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar" class="boton" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <footer id="footer">
+
+        </footer>
+        <script src ="script.js"></script>
+    </body>
+</hmtl>
