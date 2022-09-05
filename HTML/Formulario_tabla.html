@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<hmtl lang="es">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Formulario</title>
+		<link rel="StyleSheet" type="text/css"/>
+        <!--Pongo estilos para que quede bien la tabla y el formulario-->
+        <style>
+            table{
+                background-color: blueviolet;
+                width: 100%;
+            }
+            th{
+                text-align:right;
+                color:aqua;
+            }
+            h1, h2{
+                text-align: center;
+                color: aqua;
+            }
+            .enviar{
+                text-align: center;
+                color: aqua;
+                background-color: blue;
+            }
+           
+        </style>
+
+        
+	</head>
+
+    <body>
+        <table>
+        <!--Creamos formulario web-->
+                <tr>
+                    <td colspan="2">
+                        <h1>Formulario</h1>
+                    </td>
+                </tr>
+                    <td colspan="2">
+                        <h2>Introduce los datos</h2>
+                    </td>
+
+            <form>
+                <tr>
+                    <!--La etiqueta label es una ayuda al navegador, es un estandar pq en este momento es lo q se busca en los form-->
+                    <!--acordarse que el for es = al id del input-->
+                    <!--Al poner el size el tamaño del cuadro de input tiene un tamaño-->
+                    <!--maxlength limita los caracteres-->
+                    <th>
+                        <label for="nombre">Escribe aquí tu nombre:</label>
+                    </th>
+                    <td>
+                        <input type="text" value="" id="nombre" name="nombre" size="20" maxlength="15" />
+                    </td>
+                </tr>
+                    <th>   
+                        <label for="apellido">Escribe aquí tu apellido:</label>
+                    </th> 
+                    <td>
+                        <input type="text" value="" id="apellido" name="apellido" size="40"/>
+                    </td>
+                <tr>
+                    <th>
+                        <label for="email">Escribe tu Email:</label>
+                    </th>
+                    <td>      
+                        <!--Con el tipo email pide que lleve una @ sino muestra un fallo-->
+                        <!--con required obligamos a rellenar ese campo-->
+                        <input type="email" value="" id="email" name="email" placeholder="ej.-nombre@tuemail.com" required/>
+                    </td>
+                </tr>
+                    <th>   
+                    
+                        <label for="edad">Edad:</label>
+                    </th> 
+                    <td>
+                        <!--Con este tipo sólo dejaría poner un nº-->
+                        <!--podemos limitar el nº para q no se escriba lo q les de la gana-->
+                        <input type="number" id="edad" name="edad" min="1" max="999" />
+                    </td>
+                <tr>
+                    <th>
+                        <label for="tel">Teléfono:</label>
+                    </th>
+                    <td>
+                        <input type="tel" id="tel" name="tel"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="fecha">Fecha de nacimiento:</label>
+                    </th>
+                    <td>
+                        <input type="date" id="fecha" name="fecha"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="buscar">Buscar:</label>
+                    </th>
+                    <td>
+                        <input type="search" id="buscar" name="buscar"/>
+                        <input type="submit" value="Buscar">
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="Enviar" id="enviar"/>
+                    </th>
+                </tr>
+
+            </form>
+        </table>
+    </body>
+
+</hmtl>

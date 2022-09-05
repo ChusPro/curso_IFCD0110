@@ -1,0 +1,47 @@
+.general{
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 0;
+    
+    text-align: center;
+}
+.contenedor{
+    position: relative;
+    padding: 50px;
+}
+a{
+    background-color:rgb(131, 241, 181) ;
+    border-color: rgb(0, 140, 255);
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+    color:rgb(0, 140, 255);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-inline-start: auto;
+    margin-right: 20px;
+    margin-inline-end: auto;
+}
+img{
+    width: 75%;
+    padding: 10%;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
+.pos{
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    border-color: rgb(0, 140, 255);
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+}
