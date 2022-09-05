@@ -11,7 +11,7 @@
      // El nombre de usuario QUE DEBE SER
     $userguardado="abraracurcix";
     // La contraseña que debe ser
-    $passwordguardado="pinpanpum";
+    $passwordguardado="abraracurcix";
     //Extraemos de los datos el dato de nombre de usuario enviado por el cliente
     $user = $data["user"];
     // Extraemos la contraseña enviado por el cliente
