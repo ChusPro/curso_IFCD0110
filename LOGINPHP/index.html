@@ -103,16 +103,21 @@
                         $("#elModal").modal('hide');
                         //$('#bienvenida').show('slow');
                         if (response.status != 200) {
-                            $('#bienvenida').text('ERROR: User o Password incorrectos');
-                            $('#bienvenida').append(JSON.stringify(e));
-
+                            $('#bienvenida h1').text('ERROR: User o Password incorrectos');
+                            $('#errMsg').append(JSON.stringify(e));
+                            $('#errMsg').show();
+                            $('#abremodal').show();
+                            $('#bienvenida').show('slow');
+                            $('#nav').hide();
                             return false;
                         } else {
-
                             sessionStorage.setItem('esLogin', toSend.user);
                             sessionStorage.setItem('password', toSend.password);
+                            $('#errMsg').hide();
                             $('#bienvenida h1').text('Bienvenido de nuevo: ' + toSend.user);
                             $('#bienvenida').show();
+                            $('#abremodal').hide();
+                            $('#nav').hide();
                         }
                         //   location.reload();
                     }).catch(error => {
