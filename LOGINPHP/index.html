@@ -20,13 +20,11 @@
 </head>
 
 <body>
-    <!--Contenido que solo ve el usuario logueado-->
+    <!--Contenido que sólo ve el usuario logueado-->
     <div id="bienvenida" style="display: none;margin:30px">
-        <h1 style="text-align: center;">HOLA BOOTSRAP</h1>
+        <h1 style="text-align: center;">QUE TAL BOOTSRAP</h1>
         <a href="perfil.html" class="btn btn-success">Ir a mi perfil <i class="fa fa-user"></i></a>
-        <button class="btn btn-success" onclick="cerrarSesion()">
-      Cerrar sesion
-    </button>
+        <button class="btn btn-success" onclick="cerrarSesion()">Cerrar sesión</button>
     </div>
     <!--Botón para abrir el modal-->
     <button id="abremodal" class="btn btn-success">Login</button>
@@ -38,8 +36,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Indica tus credenciales</h5>
                     <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button> -->
+                    <span aria-hidden="true">&times;</span>
+                    </button> -->
                 </div>
                 <div class="modal-body">
                     <form name="login" id="login">
@@ -63,11 +61,11 @@
     </div>
     <script>
         let cerrarSesion = function() {
-            sessionStorage.removeItem('esLogin');
-            sessionStorage.removeItem('password');
+            sessionStorage.removeItem('esLogin');   //borramos usuario
+            sessionStorage.removeItem('password');  //borramos contraseña
             //  window.location.href="/LOGINPHP";
-            $("#elModal").modal('show');
-            $('#bienvenida').hide();
+            $("#elModal").modal('show');    //mostramos el id elmodal
+            $('#bienvenida').hide();        //escondemos el id bienvenida
         }
         $(document).ready(function() {
             // (javascript) window.onload = function(){}
@@ -103,7 +101,7 @@
                             body: JSON.stringify(toSend)
                         }).then(async response => {
                         $("#elModal").modal('hide');
-                        $('#bienvenida').show('slow');
+                        //$('#bienvenida').show('slow');
                         if (response.status != 200) {
                             $('#bienvenida').text('ERROR: User o Password incorrectos');
                             $('#bienvenida').append(JSON.stringify(e));
