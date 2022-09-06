@@ -61,6 +61,7 @@
     </div>
     <script>
         let cerrarSesion = function() {
+            //sessionStorage almacena datos para una sola sesión
             sessionStorage.removeItem('esLogin');   //borramos usuario
             sessionStorage.removeItem('password');  //borramos contraseña
             //  window.location.href="/LOGINPHP";
@@ -69,7 +70,7 @@
         }
         $(document).ready(function() {
             // (javascript) window.onload = function(){}
-            let esLogin = sessionStorage.getItem('esLogin') || false;
+            let esLogin = sessionStorage.getItem('esLogin') || false; //leemos los datos de esLogin(almacenamiento de la sesión)
             let pass = sessionStorage.getItem('password') || false;
             let path = "http://localhost/CURSO-IFCD0110/LOGINPHP/";
             if (!esLogin) {
@@ -111,8 +112,8 @@
                             $('#nav').hide();
                             return false;
                         } else {
-                            sessionStorage.setItem('esLogin', toSend.user);
-                            sessionStorage.setItem('password', toSend.password);
+                            sessionStorage.setItem('esLogin', toSend.user); //guardamos los datos de esLogin y los mandamos el usuario
+                            sessionStorage.setItem('password', toSend.password);    //guardamos los datos del pass y los mandamos al pass.
                             $('#errMsg').hide();
                             $('#bienvenida h1').text('Bienvenido de nuevo: ' + toSend.user);
                             $('#bienvenida').show();
